@@ -25,8 +25,8 @@ async function getTodo(req, res) {
 async function editTodo(req, res) {
   const { id } = req.params;
   const editedTodo = req.body;
-  const response = await Todo.findByIdAndUpdate(id, editedTodo);
 
+  const response = await Todo.findByIdAndUpdate(id, editedTodo);
   res.status(200).json(new Response("edited the todo with given id", response));
 }
 
